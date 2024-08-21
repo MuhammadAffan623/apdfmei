@@ -1,4 +1,4 @@
-import type { Plugin } from '@pdfme/common';
+import type { Plugin } from 'apdf-mei-common';
 import type { TableSchema } from './types.js';
 import { pdfRender } from './pdfRender.js';
 import { uiRender } from './uiRender.js';

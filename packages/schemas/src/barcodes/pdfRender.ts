@@ -1,4 +1,4 @@
-import { PDFRenderProps } from '@pdfme/common';
+import { PDFRenderProps } from 'apdf-mei-common';
 import { convertForPdfLayoutProps } from '../utils.js';
 import type { BarcodeSchema } from './types';
 import { createBarCode, validateBarcodeInput } from './helper.js';

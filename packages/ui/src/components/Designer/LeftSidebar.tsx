@@ -3,7 +3,7 @@ import {
   Schema,
   Plugin,
   BasePdf,
-} from '@pdfme/common';
+} from 'apdf-mei-common';
 import { theme, Button } from 'antd';
 import { useDraggable } from '@dnd-kit/core';
 import { CSS } from "@dnd-kit/utilities";

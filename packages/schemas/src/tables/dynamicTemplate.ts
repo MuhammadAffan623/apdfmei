@@ -1,4 +1,4 @@
-import { Template, Schema, BasePdf, CommonOptions } from '@pdfme/common';
+import { Template, Schema, BasePdf, CommonOptions } from 'apdf-mei-common';
 import { createMultiTables, createSingleTable } from './tableHelper';
 import { cloneDeep } from '../utils';
 import { getBodyWithRange, getBody } from './helper.js';

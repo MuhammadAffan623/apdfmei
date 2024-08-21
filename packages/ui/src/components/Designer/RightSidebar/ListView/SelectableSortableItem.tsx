@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { useSortable } from '@dnd-kit/sortable';
-import { SchemaForUI } from '@pdfme/common';
+import { SchemaForUI } from 'apdf-mei-common';
 import { PluginsRegistry, I18nContext } from '../../../../contexts';
 import Item from './Item';
 import { useMountStatus } from '../../../../hooks';

@@ -9,8 +9,8 @@ import {
   getB64BasePdf,
   isBlankPdf,
   mm2pt,
-} from '@pdfme/common';
-import { builtInPlugins } from '@pdfme/schemas';
+} from 'apdf-mei-common';
+import { builtInPlugins } from 'apdf-mei-schemas';
 import { PDFPage, PDFDocument, PDFEmbeddedPage, TransformationMatrix } from '@pdfme/pdf-lib';
 import { TOOL_NAME } from './constants.js';
 import type { EmbedPdfBox } from './types';

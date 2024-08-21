@@ -9,7 +9,7 @@ import {
   Size,
   isBlankPdf,
   px2mm,
-} from '@pdfme/common';
+} from 'apdf-mei-common';
 import { DndContext } from '@dnd-kit/core';
 import RightSidebar from './RightSidebar/index';
 import LeftSidebar from './LeftSidebar';

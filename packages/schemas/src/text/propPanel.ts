@@ -4,7 +4,7 @@ import {
   PropPanelWidgetProps,
   PropPanelSchema,
   getFallbackFontName,
-} from '@pdfme/common';
+} from 'apdf-mei-common';
 import type { TextSchema } from './types';
 import {
   DEFAULT_FONT_SIZE,

@@ -1,5 +1,5 @@
 {
-  "name": "@apdfmei/generator",
+  "name": "apdf-mei-generator",
   "version": "0.0.0",
   "sideEffects": false,
   "author": "hand-dot",
@@ -48,13 +48,13 @@
     "fontkit": "^2.0.2"
   },
   "devDependencies": {
-    "@pdfme/common": "file:../common",
-    "@pdfme/schemas": "file:../schemas",
+    "apdf-mei-common": "file:../common",
+    "apdf-mei-schemas": "file:../schemas",
     "pdf2json": "^2.0.0"
   },
   "peerDependencies": {
-    "@pdfme/common": "latest",
-    "@pdfme/schemas": "latest"
+    "apdf-mei-common": "latest",
+    "apdf-mei-schemas": "latest"
   },
   "jest": {
     "resolver": "ts-jest-resolver",

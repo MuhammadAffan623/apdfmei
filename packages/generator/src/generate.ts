@@ -1,7 +1,7 @@
 import * as pdfLib from '@pdfme/pdf-lib';
-import type { GenerateProps } from '@pdfme/common';
-import { checkGenerateProps, getDynamicTemplate } from '@pdfme/common';
-import { modifyTemplateForTable, getDynamicHeightForTable } from '@pdfme/schemas';
+import type { GenerateProps } from 'apdf-mei-common';
+import { checkGenerateProps, getDynamicTemplate } from 'apdf-mei-common';
+import { modifyTemplateForTable, getDynamicHeightForTable } from 'apdf-mei-schemas';
 import { insertPage, preprocessing, postProcessing, getEmbedPdfPages, validateRequiredFields } from './helper.js';
 
 const generate = async (props: GenerateProps) => {
@@ -10,7 +10,7 @@ const generate = async (props: GenerateProps) => {
   const basePdf = template.basePdf;
 
   if (inputs.length === 0) {
-    throw new Error('[@pdfme/generator] inputs should not be empty, pass at least an empty object in the array');
+    throw new Error('[apdf-mei-generator] inputs should not be empty, pass at least an empty object in the array');
   }
 
   validateRequiredFields(template, inputs);

@@ -7,7 +7,7 @@ import {
   getDefaultFont,
   getFallbackFontName,
   mm2pt,
-} from '@pdfme/common';
+} from 'apdf-mei-common';
 import {
   VERTICAL_ALIGN_TOP,
   VERTICAL_ALIGN_MIDDLE,

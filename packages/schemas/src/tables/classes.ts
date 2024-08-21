@@ -1,4 +1,4 @@
-import { Font, mm2pt, pt2mm } from '@pdfme/common';
+import { Font, mm2pt, pt2mm } from 'apdf-mei-common';
 import type { Font as FontKitFont } from 'fontkit';
 import { splitTextToSize, getFontKitFont, widthOfTextAtSize } from '../text/helper';
 import type { Styles, TableInput, Settings, Section, StylesProps } from './types';

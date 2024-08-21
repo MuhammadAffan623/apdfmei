@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect, useContext } from 'react';
-import { Template, SchemaForUI, PreviewProps, Size, getDynamicTemplate } from '@pdfme/common';
+import { Template, SchemaForUI, PreviewProps, Size, getDynamicTemplate } from 'apdf-mei-common';
 import { modifyTemplateForTable, getDynamicHeightForTable } from '@pdfme/schemas';
 import UnitPager from './UnitPager';
 import Root from './Root';

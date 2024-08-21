@@ -9,7 +9,7 @@ import {
   getFallbackFontName,
   getDefaultFont,
   DEFAULT_FONT_NAME,
-} from '@pdfme/common';
+} from 'apdf-mei-common';
 import { Buffer } from 'buffer';
 import type { TextSchema, FontWidthCalcValues } from './types';
 import {

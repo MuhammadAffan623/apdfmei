@@ -1,6 +1,6 @@
 import FormRender, { useForm } from 'form-render';
 import React, { useRef, useContext, useState, useEffect } from 'react';
-import type { ChangeSchemaItem, Dict, SchemaForUI, PropPanelWidgetProps, PropPanelSchema } from '@pdfme/common';
+import type { ChangeSchemaItem, Dict, SchemaForUI, PropPanelWidgetProps, PropPanelSchema } from 'apdf-mei-common';
 import type { SidebarProps } from '../../../../types';
 import { MenuOutlined } from '@ant-design/icons';
 import { I18nContext, PluginsRegistry, OptionsContext } from '../../../../contexts';

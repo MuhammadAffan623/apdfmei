@@ -17,7 +17,7 @@ import {
   Size,
   isBlankPdf,
   Plugins,
-} from '@pdfme/common';
+} from 'apdf-mei-common';
 import { RULER_HEIGHT } from './constants.js';
 
 export const uuid = () =>

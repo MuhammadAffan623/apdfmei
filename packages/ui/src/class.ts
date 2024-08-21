@@ -16,7 +16,7 @@ import {
   checkInputs,
   checkUIOptions,
   checkPreviewProps,
-} from '@pdfme/common';
+} from 'apdf-mei-common';
 import { builtInPlugins } from '@pdfme/schemas';
 
 export abstract class BaseUIClass {

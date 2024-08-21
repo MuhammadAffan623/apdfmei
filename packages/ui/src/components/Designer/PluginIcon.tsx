@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Plugin } from "@pdfme/common";
+import { Plugin } from "apdf-mei-common";
 import { OptionsContext } from '../../contexts';
 
 interface PluginIconProps {

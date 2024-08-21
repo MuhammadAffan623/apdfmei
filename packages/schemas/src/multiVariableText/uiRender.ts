@@ -1,4 +1,4 @@
-import { UIRenderProps } from '@pdfme/common';
+import { UIRenderProps } from 'apdf-mei-common';
 import { MultiVariableTextSchema } from './types';
 import {
   uiRender as parentUiRender,

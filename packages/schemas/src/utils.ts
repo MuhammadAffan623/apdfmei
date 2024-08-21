@@ -1,6 +1,6 @@
 import type * as CSS from 'csstype';
 import { cmyk, degrees, degreesToRadians, rgb } from '@pdfme/pdf-lib';
-import { Schema, mm2pt, Mode, isHexValid, ColorType } from '@pdfme/common';
+import { Schema, mm2pt, Mode, isHexValid, ColorType } from 'apdf-mei-common';
 
 export const convertForPdfLayoutProps = ({
   schema,

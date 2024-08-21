@@ -1,6 +1,6 @@
 import { Button, Form } from 'antd';
 import React from 'react';
-import type { PropPanelWidgetProps, SchemaForUI } from '@pdfme/common';
+import type { PropPanelWidgetProps, SchemaForUI } from 'apdf-mei-common';
 
 interface ButtonConfig {
   key: string;

@@ -1,9 +1,9 @@
 import type { ChangeEvent } from 'react';
 import type { PDFImage, PDFEmbeddedPage } from '@pdfme/pdf-lib';
-import type { Plugin } from '@pdfme/common';
-import type { PDFRenderProps, Schema } from '@pdfme/common';
+import type { Plugin } from 'apdf-mei-common';
+import type { PDFRenderProps, Schema } from 'apdf-mei-common';
 import type * as CSS from 'csstype';
-import { UIRenderProps, px2mm } from '@pdfme/common';
+import { UIRenderProps, px2mm } from 'apdf-mei-common';
 import { convertForPdfLayoutProps, addAlphaToHex, isEditable, readFile } from '../utils.js';
 import { DEFAULT_OPACITY } from '../constants.js';
 import { getImageDimension } from './imagehelper.js';

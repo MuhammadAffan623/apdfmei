@@ -1,5 +1,5 @@
 import { propPanel as parentPropPanel } from '../text/propPanel';
-import { PropPanel, PropPanelWidgetProps } from '@pdfme/common';
+import { PropPanel, PropPanelWidgetProps } from 'apdf-mei-common';
 import { MultiVariableTextSchema } from './types';
 
 const mapDynamicVariables = (props: PropPanelWidgetProps) => {

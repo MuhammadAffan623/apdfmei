@@ -1,6 +1,6 @@
-import type { PropPanel } from '@pdfme/common';
+import type { PropPanel } from 'apdf-mei-common';
 import type { TableSchema } from './types';
-import { getFallbackFontName, DEFAULT_FONT_NAME } from '@pdfme/common';
+import { getFallbackFontName, DEFAULT_FONT_NAME } from 'apdf-mei-common';
 import {
   getDefaultCellStyles,
   getCellPropPanelSchema,

@@ -1,5 +1,5 @@
 import type { TableSchema } from './types';
-import type { PDFRenderProps } from '@pdfme/common';
+import type { PDFRenderProps } from 'apdf-mei-common';
 import { Cell, Table, Row, Column } from './classes';
 import { rectangle } from '../shapes/rectAndEllipse';
 import cell from './cell';

@@ -1,5 +1,5 @@
 {
-  "name": "@apdfmei/schemas",
+  "name": "apdf-mei-schemas",
   "version": "0.0.0",
   "sideEffects": false,
   "author": "hand-dot",
@@ -49,7 +49,7 @@
     "fontkit": "^2.0.2"
   },
   "devDependencies": {
-    "@pdfme/common": "file:../common",
+    "apdf-mei-common": "file:../common",
     "@types/bwip-js": "^3.2.1",
     "@types/fontkit": "^2.0.4",
     "@types/pngjs": "^6.0.2",
@@ -57,7 +57,7 @@
     "pngjs": "^7.0.0"
   },
   "peerDependencies": {
-    "@pdfme/common": "latest"
+    "apdf-mei-common": "latest"
   },
   "jest": {
     "resolver": "ts-jest-resolver",

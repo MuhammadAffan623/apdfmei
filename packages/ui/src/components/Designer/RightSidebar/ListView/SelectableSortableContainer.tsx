@@ -15,7 +15,7 @@ import {
   sortableKeyboardCoordinates,
   verticalListSortingStrategy,
 } from '@dnd-kit/sortable';
-import { SchemaForUI } from '@pdfme/common';
+import { SchemaForUI } from 'apdf-mei-common';
 import type { SidebarProps } from '../../../../types';
 import { PluginsRegistry } from '../../../../contexts';
 import Item from './Item';

@@ -1,4 +1,4 @@
-import type { PropPanel } from '@pdfme/common';
+import type { PropPanel } from 'apdf-mei-common';
 import type { BarcodeSchema } from './types';
 import {
   DEFAULT_BARCODE_COLOR,

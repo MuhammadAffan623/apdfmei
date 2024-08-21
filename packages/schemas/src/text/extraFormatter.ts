@@ -1,4 +1,4 @@
-import { Dict } from '@pdfme/common';
+import { Dict } from 'apdf-mei-common';
 import {
   TextAlignCenterIcon,
   TextAlignLeftIcon,

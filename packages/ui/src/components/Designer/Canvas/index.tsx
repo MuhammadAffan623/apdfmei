@@ -11,7 +11,7 @@ import React, {
 } from 'react';
 import { theme, Button } from 'antd';
 import { OnDrag, OnResize, OnClick, OnRotate } from 'react-moveable';
-import { ZOOM, SchemaForUI, Size, ChangeSchemas, BasePdf, isBlankPdf } from '@pdfme/common';
+import { ZOOM, SchemaForUI, Size, ChangeSchemas, BasePdf, isBlankPdf } from 'apdf-mei-common';
 import { PluginsRegistry } from '../../../contexts';
 import { CloseOutlined } from '@ant-design/icons';
 import { RULER_HEIGHT, RIGHT_SIDEBAR_WIDTH } from '../../../constants';

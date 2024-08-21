@@ -5,7 +5,7 @@ import {
   CommonOptions,
   getDefaultFont,
   getFallbackFontName,
-} from '@pdfme/common';
+} from 'apdf-mei-common';
 import type {
   TableSchema,
   CellStyle,

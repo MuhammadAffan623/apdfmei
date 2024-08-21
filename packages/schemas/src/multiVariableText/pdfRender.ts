@@ -1,4 +1,4 @@
-import { PDFRenderProps } from '@pdfme/common';
+import { PDFRenderProps } from 'apdf-mei-common';
 import { MultiVariableTextSchema } from './types';
 import { pdfRender as parentPdfRender } from '../text/pdfRender';
 import { substituteVariables } from './helper';
