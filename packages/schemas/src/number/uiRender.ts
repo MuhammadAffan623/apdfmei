@@ -106,6 +106,7 @@ export const uiRender = async (arg: UIRenderProps<TextSchema>) => {
     textBlock.addEventListener('keyup', () => {
       setTimeout(() => {
         void (async () => {
+          console.log('textBlock >> ', textBlock);
           if (!textBlock.textContent) return;
           dynamicFontSize = await calculateDynamicFontSize({
             textSchema: schema,
@@ -243,27 +244,55 @@ export const buildStyledTextContainer = async (arg: UIRenderProps<TextSchema>, v
 export const makeElementPlainTextContentEditable = (element: HTMLElement) => {
   if (!isFirefox()) {
     element.contentEditable = 'plaintext-only';
-    return;
+  } else {
+    element.contentEditable = 'true';
+    element.addEventListener('keydown', (e: KeyboardEvent) => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        document.execCommand('insertLineBreak', false, undefined);
+      }
+    });
+
+    element.addEventListener('paste', (e: ClipboardEvent) => {
+      e.preventDefault();
+      const paste = e.clipboardData?.getData('text');
+      const selection = window.getSelection();
+      if (!selection?.rangeCount) return;
+      selection.deleteFromDocument();
+      selection.getRangeAt(0).insertNode(document.createTextNode(paste || ''));
+      selection.collapseToEnd();
+    });
   }
 
-  element.contentEditable = 'true';
-  element.addEventListener('keydown', (e: KeyboardEvent) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      document.execCommand('insertLineBreak', false, undefined);
+  // Prevent non-numeric input
+  element.addEventListener('input', (e: Event) => {
+    const target = e.target as HTMLElement;
+    const numericText = target.innerText.replace(/[^0-9]/g, ''); // Remove non-numeric characters
+    if (target.innerText !== numericText) {
+      target.innerText = numericText; // Set the cleaned numeric text
     }
   });
 
-  element.addEventListener('paste', (e: ClipboardEvent) => {
-    e.preventDefault();
-    const paste = e.clipboardData?.getData('text');
-    const selection = window.getSelection();
-    if (!selection?.rangeCount) return;
-    selection.deleteFromDocument();
-    selection.getRangeAt(0).insertNode(document.createTextNode(paste || ''));
-    selection.collapseToEnd();
+  element.addEventListener('keydown', (e: KeyboardEvent) => {
+    // Allow: backspace, delete, tab, escape, enter, and arrow keys
+    if (
+      e.key === 'Backspace' ||
+      e.key === 'Delete' ||
+      e.key === 'Tab' ||
+      e.key === 'Escape' ||
+      e.key === 'Enter' ||
+      (e.key >= 'ArrowLeft' && e.key <= 'ArrowDown')
+    ) {
+      return;
+    }
+
+    // Prevent non-numeric keys
+    if (!e.key.match(/^[0-9]$/)) {
+      e.preventDefault();
+    }
   });
 };
+
 
 const mapVerticalAlignToFlex = (verticalAlignmentValue: string | undefined) => {
   switch (verticalAlignmentValue) {

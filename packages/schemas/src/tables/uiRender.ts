@@ -179,7 +179,7 @@ const applyButtonStyles = (button: HTMLButtonElement, type: 'add' | 'remove') =>
   button.style.height = '30px';
   button.style.position = 'absolute';
   button.style.border = 'none';
-  button.style.borderRadius = '50%';
+  button.style.borderRadius = '4px';
   button.style.fontSize = '24px';
   button.style.textAlign = 'center';
   button.style.lineHeight = '30px';
@@ -188,23 +188,23 @@ const applyButtonStyles = (button: HTMLButtonElement, type: 'add' | 'remove') =>
   button.style.transition = 'background-color 0.3s, transform 0.2s';
 
   if (type === 'add') {
-    button.style.backgroundColor = '#4caf50'; // Green color
+    button.style.backgroundColor = '#efdfdf'; // Green color
     button.innerText = '+';
     button.title = 'Add a new row';
   } else if (type === 'remove') {
-    button.style.backgroundColor = '#f44336'; // Red color
+    button.style.backgroundColor = '#efdfdf'; // Red color
     button.innerText = '-';
     button.title = 'Remove this row/column';
   }
 
   // Hover effect
   button.addEventListener('mouseover', () => {
-    button.style.backgroundColor = type === 'add' ? '#388e3c' : '#c62828';
+    button.style.backgroundColor = 'rgb(211 195 195)';
     button.style.transform = 'scale(1.1)';
   });
 
   button.addEventListener('mouseout', () => {
-    button.style.backgroundColor = type === 'add' ? '#4caf50' : '#f44336';
+    button.style.backgroundColor = '#efdfdf';
     button.style.transform = 'scale(1)';
   });
 };
