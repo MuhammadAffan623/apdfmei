@@ -62,7 +62,7 @@ export const validateRequiredFields = (template: Template, inputs: Record<string
   template.schemas.forEach((schemaObj) =>
     Object.entries(schemaObj).forEach(([fieldName, schema]) => {
       if (schema.required && !schema.readOnly && !inputs.some((input) => input[fieldName])) {
-        throw new Error(`[@pdfme/generator] input for '${fieldName}' is required to generate this PDF`);
+        throw new Error(`[apdf-mei-generator] input for '${fieldName}' is required to generate this PDF`);
       }
     })
   );
@@ -90,7 +90,7 @@ export const preprocessing = async (arg: { template: Template; userPlugins: Plug
     const render = pluginValues.find((pv) => pv.propPanel.defaultSchema.type === type);
 
     if (!render) {
-      throw new Error(`[@pdfme/generator] Renderer for type ${type} not found.
+      throw new Error(`[apdf-mei-generator] Renderer for type ${type} not found.
 Check this document: https://pdfme.com/docs/custom-schemas`);
     }
     return { ...acc, [type]: render.pdf };

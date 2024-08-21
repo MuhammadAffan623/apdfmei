@@ -82,7 +82,7 @@ export const useUIPreProcessor = ({ template, size, zoomLevel }: UIPreProcessorP
       })
       .catch((err: Error) => {
         setError(err);
-        console.error(`[@pdfme/ui] ${err}`);
+        console.error(`[apdf-mei-ui] ${err}`);
       });
   }, [template, size]);
 

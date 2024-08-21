@@ -18,15 +18,15 @@ This schema allows you to add tables to PDFs and dynamically modify the table da
 
 ## Using the Table Schema
 
-The table schema is included in the `@pdfme/schemas` package and is exported as `tableBeta`.  
-You can add the table schema as a plugin to `@pdfme/ui` and `@pdfme/generator` using the code below.
+The table schema is included in the `apdf-mei-schemas` package and is exported as `tableBeta`.  
+You can add the table schema as a plugin to `apdf-mei-ui` and `apdf-mei-generator` using the code below.
 
 To support page breaks, ensure to set the `basePdf` property in the template to `{ width: number, height: number, padding: [number,number,number,number] }`.
 
 ```javascript
-import { tableBeta } from '@pdfme/schemas';
-import { Designer } from '@pdfme/ui';
-import { generate } from '@pdfme/generator';
+import { tableBeta } from 'apdf-mei-schemas';
+import { Designer } from 'apdf-mei-ui';
+import { generate } from 'apdf-mei-generator';
 
 new Designer({
     domContainer,

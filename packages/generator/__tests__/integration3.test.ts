@@ -1,7 +1,7 @@
 import { writeFileSync } from 'fs';
 import generate from '../src/generate';
 import { other, shape } from './assets/templates';
-import { getInputFromTemplate } from '@pdfme/common';
+import { getInputFromTemplate } from 'apdf-mei-common';
 import {
   text,
   image,
@@ -11,7 +11,7 @@ import {
   readOnlyText,
   barcodes,
   readOnlySvg,
-} from '@pdfme/schemas';
+} from 'apdf-mei-schemas';
 import { getFont, getPdf, getPdfTmpPath, getPdfAssertPath } from './utils';
 
 const signature = {

@@ -1,4 +1,4 @@
-import { Template } from '@pdfme/common';
+import { Template } from 'apdf-mei-common';
 
 const レターパック = require('./レターパック.json') as Template;
 const レターパックライト = require('./レターパックライト.json') as Template;

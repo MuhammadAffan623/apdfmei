@@ -10,13 +10,13 @@ export default defineConfig(({ mode }) => {
     build: {
       lib: {
         entry: 'src/index.ts',
-        name: '@pdfme/ui',
+        name: 'apdf-mei-ui',
         fileName: (format) => `index.${format}.js`,
       },
     },
     optimizeDeps: {
       include: ['react', 'react-dom', 'pdfjs-dist', 'antd'],
-      exclude: ['@pdfme/common', '@pdfme/schemas'],
+      exclude: ['apdf-mei-common', 'apdf-mei-schemas'],
     },
   };
 });

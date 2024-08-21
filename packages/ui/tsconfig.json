@@ -27,10 +27,10 @@
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
-      "@pdfme/common": [
+      "apdf-mei-common": [
         "packages/common/dist/esm/src"
       ],
-      "@pdfme/schemas": [
+      "apdf-mei-schemas": [
         "packages/schemas/dist/esm/src"
       ]
     },

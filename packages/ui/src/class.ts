@@ -17,7 +17,7 @@ import {
   checkUIOptions,
   checkPreviewProps,
 } from 'apdf-mei-common';
-import { builtInPlugins } from '@pdfme/schemas';
+import { builtInPlugins } from 'apdf-mei-schemas';
 
 export abstract class BaseUIClass {
   protected domContainer!: HTMLElement | null;

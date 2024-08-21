@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import type { Template } from '@pdfme/common';
-import type { Form, Viewer } from '@pdfme/ui';
-import { text, image, barcodes } from '@pdfme/schemas';
+import type { Template } from 'apdf-mei-common';
+import type { Form, Viewer } from 'apdf-mei-ui';
+import { text, image, barcodes } from 'apdf-mei-schemas';
 import { getFont } from './libs/helper';
 
 const useForceUpdate = () => {
@@ -19,7 +19,7 @@ export const useForm = (props: {
 
   useEffect(() => {
     if (formRef.current && form.current === null && template) {
-      Promise.all([import('@pdfme/ui'), getFont()]).then(([{ Form }, font]) => {
+      Promise.all([import('apdf-mei-ui'), getFont()]).then(([{ Form }, font]) => {
         form.current = new Form({
           domContainer: formRef.current,
           template,
@@ -50,7 +50,7 @@ export const useViewer = (props: {
 
   useEffect(() => {
     if (viewerRef.current && viewer.current === null && template) {
-      Promise.all([import('@pdfme/ui'), getFont()]).then(([{ Viewer }, font]) => {
+      Promise.all([import('apdf-mei-ui'), getFont()]).then(([{ Viewer }, font]) => {
         viewer.current = new Viewer({
           domContainer: viewerRef.current,
           template,

@@ -158,7 +158,7 @@ export const readFile = (input: File | FileList | null): Promise<string | ArrayB
     };
 
     fileReader.onerror = (e) => {
-      reject(new Error('[@pdfme/schemas] File reading failed'));
+      reject(new Error('[apdf-mei-schemas] File reading failed'));
     };
 
     let file: File | null = null;
@@ -171,7 +171,7 @@ export const readFile = (input: File | FileList | null): Promise<string | ArrayB
     if (file) {
       fileReader.readAsDataURL(file);
     } else {
-      reject(new Error('[@pdfme/schemas] No files provided'));
+      reject(new Error('[apdf-mei-schemas] No files provided'));
     }
   });
 

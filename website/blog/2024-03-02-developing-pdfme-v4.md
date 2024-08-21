@@ -67,7 +67,7 @@ I apologize for the slow development speed. However, the release of V4 is gradua
     ![](https://storage.googleapis.com/zenn-user-upload/65a828e2f2b7-20240302.png)
 
     - The following command can be used for installation:
-        - `npm i @pdfme/common@4.0.0-alpha.0 @pdfme/schemas@4.0.0-alpha.0 @pdfme/generator@4.0.0-alpha.0 @pdfme/ui@4.0.0-alpha.0`
+        - `npm i apdf-mei-common@4.0.0-alpha.0 apdf-mei-schemas@4.0.0-alpha.0 apdf-mei-generator@4.0.0-alpha.0 apdf-mei-ui@4.0.0-alpha.0`
 
 ## About Backward Compatibility
 

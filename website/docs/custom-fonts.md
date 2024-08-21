@@ -8,10 +8,10 @@ You can use this feature to solve those issues.
 
 ## About Font type
 
-You can import from `@pdfme/common` as below.
+You can import from `apdf-mei-common` as below.
 
 ```ts
-import type { Font } from '@pdfme/common';
+import type { Font } from 'apdf-mei-common';
 ```
 
 The type of font is as follows.
@@ -50,8 +50,8 @@ Let's check out how to set font in the generator and ui packages.
 Set font as option in [generate](/docs/getting-started#generator) function
 
 ```ts
-import { Template, BLANK_PDF, Font } from '@pdfme/common';
-import { generate } from '@pdfme/generator';
+import { Template, BLANK_PDF, Font } from 'apdf-mei-common';
+import { generate } from 'apdf-mei-generator';
 
 const font = {
   serif: {
@@ -112,7 +112,7 @@ The sample code is for [Designer](/docs/getting-started#designer), but the same 
 #### Setting font at instance initialization
 
 ```ts
-import { Designer } from '@pdfme/ui';
+import { Designer } from 'apdf-mei-ui';
 
 const domContainer = document.getElementById('container');
 const template = {

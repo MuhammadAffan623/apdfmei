@@ -1,6 +1,6 @@
-import { SchemaForUI, Schema, Template, BLANK_PDF, BasePdf } from '@pdfme/common';
+import { SchemaForUI, Schema, Template, BLANK_PDF, BasePdf } from 'apdf-mei-common';
 import { uuid, getUniqSchemaKey, schemasList2template, changeSchemas } from '../src/helper';
-import { text, image } from '@pdfme/schemas';
+import { text, image } from 'apdf-mei-schemas';
 
 const getSchema = (): Schema => ({
   type: 'text',

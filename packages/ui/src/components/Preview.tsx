@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect, useContext } from 'react';
 import { Template, SchemaForUI, PreviewProps, Size, getDynamicTemplate } from 'apdf-mei-common';
-import { modifyTemplateForTable, getDynamicHeightForTable } from '@pdfme/schemas';
+import { modifyTemplateForTable, getDynamicHeightForTable } from 'apdf-mei-schemas';
 import UnitPager from './UnitPager';
 import Root from './Root';
 import ErrorScreen from './ErrorScreen';
@@ -62,7 +62,7 @@ const Preview = ({
         setSchemasList(sl);
         await refresh(dynamicTemplate);
       })
-      .catch((err) => console.error(`[@pdfme/ui] `, err));
+      .catch((err) => console.error(`[apdf-mei-ui] `, err));
   };
 
   useEffect(() => {

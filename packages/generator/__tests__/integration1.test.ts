@@ -1,8 +1,8 @@
 import { writeFileSync } from 'fs';
 import generate from '../src/generate';
 import { label, envelope } from './assets/templates';
-import { getInputFromTemplate } from '@pdfme/common';
-import { text, image } from '@pdfme/schemas';
+import { getInputFromTemplate } from 'apdf-mei-common';
+import { text, image } from 'apdf-mei-schemas';
 import { getFont, getPdf, getPdfTmpPath, getPdfAssertPath } from './utils';
 
 const PERFORMANCE_THRESHOLD = parseFloat(process.env.PERFORMANCE_THRESHOLD || '1.5');

@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Template, checkTemplate, getInputFromTemplate } from '@pdfme/common';
-import { generate } from '@pdfme/generator';
+import { Template, checkTemplate, getInputFromTemplate } from 'apdf-mei-common';
+import { generate } from 'apdf-mei-generator';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import { text, image, barcodes } from '@pdfme/schemas';
+import { text, image, barcodes } from 'apdf-mei-schemas';
 import { getFont, deNormalizeDatas, normalizeDatas } from '../libs/helper';
 import { useViewer } from '../hooks';
 import DemoAppHeader from './DemoAppHeader';

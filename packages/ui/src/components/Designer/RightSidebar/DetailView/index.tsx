@@ -143,7 +143,7 @@ const DetailView = (props: DetailViewProps) => {
 
   const activePropPanelSchema = activePlugin?.propPanel.schema;
   if (!activePropPanelSchema) {
-    console.error(`[@pdfme/ui] No propPanel.schema for ${activeSchema.type}.
+    console.error(`[apdf-mei-ui] No propPanel.schema for ${activeSchema.type}.
 Check this document: https://pdfme.com/docs/custom-schemas`);
   }
 

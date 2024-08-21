@@ -18,28 +18,28 @@ There are two packages in pdfme, generator and UI.
 The package for generating PDF can be installed with the following command.
 
 ```
-npm i @pdfme/generator @pdfme/common
+npm i apdf-mei-generator apdf-mei-common
 ```
 
 The packages for using PDF designer, forms and viewers can be installed with the following commands.
 
 ```
-npm i @pdfme/ui @pdfme/common
+npm i apdf-mei-ui apdf-mei-common
 ```
 
-\*You must install `@pdfme/common` regardless of which package you use.
+\*You must install `apdf-mei-common` regardless of which package you use.
 
 The following type, function and classes are available in pdfme.
 
-`@pdfme/common`
+`apdf-mei-common`
 
 - [Template](https://pdfme.com/docs/getting-started#template)
 
-`@pdfme/generator`
+`apdf-mei-generator`
 
 - [generate](https://pdfme.com/docs/getting-started#generator)
 
-`@pdfme/ui`
+`apdf-mei-ui`
 
 - [Designer](https://pdfme.com/docs/getting-started#designer)
 - [Form](https://pdfme.com/docs/getting-started#form)
@@ -48,13 +48,13 @@ The following type, function and classes are available in pdfme.
 If your environment uses webpack, import the necessary items as shown below.
 
 ```ts
-import type { Template } from '@pdfme/common';
-import { generate } from '@pdfme/generator';
+import type { Template } from 'apdf-mei-common';
+import { generate } from 'apdf-mei-generator';
 ```
 
 ```ts
-import type { Template } from '@pdfme/common';
-import { Designer, Form, Viewer } from '@pdfme/ui';
+import type { Template } from 'apdf-mei-common';
+import { Designer, Form, Viewer } from 'apdf-mei-ui';
 ```
 
 **All objects use `Template`, which will be briefly explained in the next section.**
@@ -62,7 +62,7 @@ import { Designer, Form, Viewer } from '@pdfme/ui';
 ## Template
 
 The core of pdfme library are Templates.  
-Template Type can be imported by both `@pdfme/generator` or `@pdfme/ui`. Templates are used everywhere.
+Template Type can be imported by both `apdf-mei-generator` or `apdf-mei-ui`. Templates are used everywhere.
 
 A template can be divided into two parts: a fixed part and a variable part.  
 We call them basePdf and schema.
@@ -76,7 +76,7 @@ The following image is a good illustration of a template.
 **basePdf** can be given a `string`(base64), `ArrayBuffer`, or `Uint8Array`.  
 A blank A4 PDF can be imported with `BLANK_PDF`. You can use it to check how it works.
 
-**schemas** can only utilize text by default, but you can load images and various barcodes like QR codes as plugins from the `@pdfme/schemas` package.  
+**schemas** can only utilize text by default, but you can load images and various barcodes like QR codes as plugins from the `apdf-mei-schemas` package.  
 Additionally, you can create your own schemas, allowing you to render types other than the ones mentioned above.  
 Check detail about [Custom Schemas](/docs/custom-schemas) from here
 
@@ -86,7 +86,7 @@ Let's take a look at some specific data.
 ### Minimal Template
 
 ```ts
-import { Template, BLANK_PDF } from '@pdfme/common';
+import { Template, BLANK_PDF } from 'apdf-mei-common';
 
 const template: Template = {
   basePdf: BLANK_PDF,
@@ -124,8 +124,8 @@ The PDF generator function, `generate`, takes 2 arguments of `template` and `inp
 The code to generate a PDF file using the [template created above](/docs/getting-started#sample-template) is shown below.
 
 ```ts
-import type { Template } from '@pdfme/common';
-import { generate } from '@pdfme/generator';
+import type { Template } from 'apdf-mei-common';
+import { generate } from 'apdf-mei-generator';
 
 const template: Template = {
   // skip...　Check the Template section.
@@ -163,8 +163,8 @@ You can design your own template from [Template Design page](/template-design), 
 Let's integrate the designer using the template created above as the default template.
 
 ```ts
-import type { Template } from '@pdfme/common';
-import { Designer } from '@pdfme/ui';
+import type { Template } from 'apdf-mei-common';
+import { Designer } from 'apdf-mei-ui';
 
 const domContainer = document.getElementById('container');
 const template: Template = {
@@ -195,8 +195,8 @@ You can use templates to create forms and PDF viewers.
 The Form creates a UI for the user to enter schemas based on the template.
 
 ```ts
-import type { Template } from '@pdfme/common';
-import { Form } from '@pdfme/ui';
+import type { Template } from 'apdf-mei-common';
+import { Form } from 'apdf-mei-ui';
 
 const domContainer = document.getElementById('container');
 const template: Template = {
@@ -230,8 +230,8 @@ The Viewer is a byproduct of the Form development process, but it allows you to 
 Using the Viewer is basically the same as using the Form, except that user cannot edit it.
 
 ```ts
-import type { Template } from '@pdfme/common';
-import { Viewer } from '@pdfme/ui';
+import type { Template } from 'apdf-mei-common';
+import { Viewer } from 'apdf-mei-ui';
 
 const domContainer = document.getElementById('container');
 const template: Template = {

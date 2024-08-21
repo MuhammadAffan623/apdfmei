@@ -92,7 +92,7 @@ const Renderer = (props: RendererProps) => {
   ) as Plugin<any>;
 
   if (!plugin || !plugin.ui) {
-    console.error(`[@pdfme/ui] Renderer for type ${schema.type} not found. 
+    console.error(`[apdf-mei-ui] Renderer for type ${schema.type} not found. 
 Check this document: https://pdfme.com/docs/custom-schemas`);
     return <></>;
   }

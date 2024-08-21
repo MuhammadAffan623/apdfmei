@@ -7,11 +7,11 @@ import HomepageHeader from '../components/HomepageHeader';
 import Divider from '../components/Divider';
 import Code from '../components/Code';
 import GithubStar from '../components/GithubStar';
-import type { Template } from '@pdfme/common';
-import { getInputFromTemplate } from '@pdfme/common';
-import { text, image, barcodes } from '@pdfme/schemas';
-import { generate } from '@pdfme/generator';
-import type { Designer, Viewer, Form } from '@pdfme/ui';
+import type { Template } from 'apdf-mei-common';
+import { getInputFromTemplate } from 'apdf-mei-common';
+import { text, image, barcodes } from 'apdf-mei-schemas';
+import { generate } from 'apdf-mei-generator';
+import type { Designer, Viewer, Form } from 'apdf-mei-ui';
 import { getSampleTemplate, getGeneratorSampleCode } from '../libs/helper';
 
 export default function Home(): JSX.Element {
@@ -40,7 +40,7 @@ export default function Home(): JSX.Element {
 
   useEffect(() => {
     if (designerRef.current) {
-      import('@pdfme/ui').then(({ Designer }) => {
+      import('apdf-mei-ui').then(({ Designer }) => {
         designer.current = new Designer({
           domContainer: designerRef.current,
           template,
@@ -58,7 +58,7 @@ export default function Home(): JSX.Element {
 
   useEffect(() => {
     if (viewerRef.current) {
-      import('@pdfme/ui').then(({ Viewer }) => {
+      import('apdf-mei-ui').then(({ Viewer }) => {
         viewer.current = new Viewer({
           domContainer: viewerRef.current,
           template,
@@ -70,7 +70,7 @@ export default function Home(): JSX.Element {
     }
 
     if (formRef.current) {
-      import('@pdfme/ui').then(({ Form }) => {
+      import('apdf-mei-ui').then(({ Form }) => {
         form.current = new Form({
           domContainer: formRef.current,
           template,
