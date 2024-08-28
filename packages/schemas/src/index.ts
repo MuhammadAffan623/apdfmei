@@ -1,6 +1,10 @@
 import multiVariableText from './multiVariableText/index.js';
 import text, { readOnlyText } from './text/index.js';
 import number from './number/index.js';
+import date from './date/index.js';
+import dateTime from './dateTime/index.js';
+import time from './time/index.js';
+
 import image, { readOnlyImage } from './graphics/image.js';
 import svg, { readOnlySvg } from './graphics/svg.js';
 import barcodes from './barcodes/index.js';
@@ -32,4 +36,7 @@ export {
   builtInPlugins,
   convertForPdfLayoutProps,
   number,
+  date,
+  dateTime,
+  time
 };

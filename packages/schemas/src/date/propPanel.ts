@@ -151,8 +151,8 @@ export const propPanel: PropPanel<TextSchema> = {
   },
   widgets: { UseDynamicFontSize },
   defaultSchema: {
-    type: 'Number',
-    content: 'Type Number...',
+    type: 'Date',
+    content: 'DD/MM/YYYY',
     position: { x: 0, y: 0 },
     width: 45,
     height: 10,
